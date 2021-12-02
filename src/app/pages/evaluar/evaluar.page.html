@@ -1,0 +1,129 @@
+<!-- <ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title class="ion-padding-top ion-text-center">
+      <img id="imglogo" src="assets/img/logotrucho.jpg" />
+      <ion-card-subtitle style="padding-bottom: 10px;">Movilizacion alumnos DuocUC</ion-card-subtitle>
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<!-- <ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Usuario</ion-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-select placeholder="Seleccione usuario" [(ngModel)]="user">
+        <ion-select-option *ngFor="let usu of users" [value]="usu">{{usu.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Post</ion-title>
+    </ion-card-header>
+    <ion-item class="ion-padding-horizontal">
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item class="ion-padding-horizontal">
+      <ion-label position="floating">Cuerpo</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-button shape="round" expand="block">Limpiar</ion-button></ion-col>
+        <ion-col><ion-button shape="round" expand="block">Guardar</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card>
+    <ion-list-header>
+      <ion-title>Post Recientes</ion-title>
+    </ion-list-header>   
+    <ion-list>  
+      <ion-item>
+        <ion-label><h4>Mega Man X</h4><p>asdsad</p></ion-label>
+        <ion-button>
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
+
+<ion-router-outlet></ion-router-outlet> -->
+
+
+<!-- <ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <img id="duoclogo" src="assets/img/duoclogo.png" />
+    </ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title class="ion-padding-top ion-text-center">
+      <img id="imglogo" src="assets/img/logotrucho.jpg" />
+      <ion-card-subtitle style="padding-bottom: 10px;">Movilizacion alumnos DuocUC</ion-card-subtitle>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-card id="centrar" class="ion-text-center">
+    <ion-card-title id="bienve">
+      <h1><b>Evalua al conductor</b></h1>
+    </ion-card-title>
+      <ion-item>
+        <ion-select placeholder="Seleccione usuario" [(ngModel)]="user">
+          <ion-select-option *ngFor="let usu of users" [value]="usu">{{usu.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+  </ion-card>
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Post</ion-title>
+    </ion-card-header>
+    <ion-item class="ion-padding-horizontal">
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input [(ngModel)]="post.title"></ion-input>
+    </ion-item>
+    <ion-item class="ion-padding-horizontal">
+      <ion-label position="floating">Cuerpo</ion-label>
+      <ion-textarea [(ngModel)]="post.body"></ion-textarea>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button shape="round" expand="block">Limpiar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" expand="block" (click)="guardarPost()" >Guardar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card>
+    <ion-list-header>
+      <ion-title>Post Recientes</ion-title>
+    </ion-list-header>
+      <ion-item *ngFor="let post of posts">
+        <ion-label><h4>{{post.title}}</h4><p>{{post.body}}</p></ion-label>
+        <ion-button (click)="deletePost()"><ion-icon slot="icon-only" name="trash-outline"></ion-icon></ion-button>
+      </ion-item>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <img id="duoclogo" src="assets/img/duoclogo.png" />
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

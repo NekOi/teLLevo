@@ -1,0 +1,51 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title class="ion-padding-top ion-text-center">
+      <img id="imglogo" src="assets/img/logotrucho.jpg"/>
+      <ion-card-subtitle style="padding-bottom: 10px;">Movilizacion alumnos DuocUC</ion-card-subtitle> 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background"> 
+  <div class="ion-padding-vertical"></div>
+  <ion-card class="ion-text-center">
+    <ion-card-title id="bienve" style="padding-left: 2px;">
+      <h1><b>Recupera tu contraseña</b></h1>      
+    </ion-card-title >     
+  <IonItem>
+    <ion-item>
+      <ion-label position="floating">Ingrese email</ion-label>
+      <ion-input clearInput [(ngModel)]="mailrec.recuperar" ></ion-input>
+    </ion-item>
+        <button id="btnRecuperar"  mat-raised-button expand="block" (click)="recuperar()"  style="vertical-align:middle"><span>Recuperar </span></button>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/login"></ion-back-button>
+        </ion-buttons>      
+  </IonItem> 
+  <!-- <ion-card-title > O </ion-card-title>
+  <br>  
+    <h1><b>¡Registrate!</b></h1>
+        <ion-item>
+          <ion-label position="stacked" >Nombre:</ion-label>
+          <ion-input clearinput type="string" [(ngModel)]="usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" >Contraseña:</ion-label>
+          <ion-input clearinput type="string" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="guardar()" >Guardar</ion-button> -->
+  </ion-card> 
+
+</ion-content>
+
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <img id="duoclogo" src="assets/img/duoclogo.png"/>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

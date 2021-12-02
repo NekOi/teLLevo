@@ -1,0 +1,35 @@
+<ion-content>
+  <!-- viajes -->
+
+
+  <ion-content> 
+    <ion-card id="c3Card">
+      <h4>Buscar movilizacion disponible</h4>
+      <ion-item>
+        <ion-label position="floating">Desde ciudad</ion-label>
+        <ion-select placeholder="Selecciones ubicacion" [(ngModel)]="dato.desde" required>
+          <ion-select-option *ngFor="let ciud of ciudades" [value]="ciud.id">{{ciud.ciudad}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Hasta ciudad</ion-label>
+        <ion-select placeholder="Seleccione Destino" [(ngModel)]="dato.hasta" required>
+          <ion-select-option *ngFor="let ciu of ciudades" [value]="ciu.id">{{ciu.ciudad}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button shape="block" (click)="Disponibles()">Disponibles</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="block" (click)="Limpiar()">Limpiar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    
+    
+    
+  </ion-content>

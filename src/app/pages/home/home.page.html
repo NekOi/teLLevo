@@ -1,0 +1,56 @@
+<ion-header [translucent]="false">
+  <ion-toolbar id="tool">
+    <img  id="imglogo" alt="logo" src="assets/img/logotrucho.jpg" />
+    <ion-card-subtitle class="ion-text-center" style="padding-bottom: 60px;">Movilizacion alumnos DuocUC</ion-card-subtitle> 
+  </ion-toolbar>
+
+<ion-toolbar  class="ion-text-center">
+  <ion-segment >
+    <ion-label>
+      <h2 id="bordeBienve">¡Bienvenido {{nomUsuario}}!</h2>
+    </ion-label>
+  </ion-segment>
+</ion-toolbar>
+<ion-toolbar>
+  <button id="btnCerrarSesion" round (click)="cerrarSesion()">Cerrar Sesion</button>
+</ion-toolbar>
+
+
+  <ion-toolbar>
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="uno">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="dos">
+        <ion-icon name="compass-outline"></ion-icon>
+        <ion-label>Mapa</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tres">
+        <ion-icon name="car-outline"></ion-icon>
+        <ion-label>Viajes</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+
+  <hr>
+  <ion-router-outlet></ion-router-outlet>
+  
+
+
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <img id="duoclogo" alt="logo duoc" src="assets/img/duoclogo.png"/>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+
+

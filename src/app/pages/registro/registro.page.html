@@ -1,0 +1,37 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title class="ion-padding-top ion-text-center">
+      <img id="imglogo" alt="logo" src="assets/img/logotrucho.jpg" />
+      <ion-card-subtitle id="ics" >Movilizacion alumnos DuocUC</ion-card-subtitle>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card class="ion-padding-top ion-text-center">
+  <h1 id="bienve" class="ion-text-center"><b>¡Registrate!</b></h1>
+  <ion-item>
+    <ion-label position="stacked" >Usuario:</ion-label>
+    <ion-input type="string" [(ngModel)]="usuario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Contraseña:</ion-label>
+    <ion-input type="string" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <button id="btnGuardar" mat-raised-button  (click)="guardar()">Registrar</button>
+  </ion-item>
+  <ion-item>
+    <ion-buttons>
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+  </ion-item>
+</ion-card>
+
+<ion-router-outlet></ion-router-outlet>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <img id="duoclogo" alt="logo duoc" src="assets/img/duoclogo.png" />
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

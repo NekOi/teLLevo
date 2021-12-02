@@ -1,0 +1,75 @@
+ion-content.background{
+    --background: #1a1a1a;
+}
+
+
+#bienve{
+    margin-top: 20px;
+    color: #1a1a1a;    
+}
+
+#imglogo{
+    max-width: 150px;
+    height: 150px;
+    padding: .10em;
+    height: 12vh;
+}
+
+#duoclogo{
+    max-width: 150px;
+    height: 150px;
+    padding: .5em;
+    height: 8vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+ion-input{   
+    border-radius: 5px;
+    font-size: small;
+}
+
+
+
+#btnRecuperar {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(255, 184, 0,1);
+    border: none;
+    color: rgb(26, 26, 26, 1);
+    text-align: center;
+    font-size: 14px;
+    padding: 2px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 3px;
+    margin-top: 10px;
+}
+
+#btnRecuperar span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#btnRecuperar span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#btnRecuperar:hover span {
+    padding-right: 25px;
+}
+
+#btnRecuperar:hover span:after {
+    opacity: 1;
+    right: 0;
+}
